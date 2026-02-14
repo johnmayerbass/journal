@@ -417,7 +417,7 @@ function renderBlogCategory() {
   const categoryArray = Object.keys(categoryList);
   categoryArray.sort();
 
-  const categoryContainer = document.querySelector("aside");
+  const categoryContainer = document.querySelector(".category-aside aside");
   categoryContainer.classList.add(...categoryContainerStyle.split(" "));
 
   const asideButton = document.querySelector("#aside-button");
