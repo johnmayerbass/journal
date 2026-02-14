@@ -74,6 +74,24 @@
 
         
         <div id="menu" class="hidden"></div>
+        <div class="relative ml-2">
+
+          <button id="categoryButton" class="w-6 h-6">
+            <span class="sr-only">카테고리 열기</span>
+          </button>
+
+          <!-- ⚠️ render.js 가 찾는 구조 절대 변경 금지 -->
+          <section class="category-aside hidden md:flex flex-col border border-graylv2 bg-white rounded-[10px] absolute left-0 top-full mt-2 z-[9999] overflow-y-auto w-fit h-fit">
+            <header class="flex items-center">
+              <h2 class="aside-tit sr-only text-sm font-semibold ml-5">content</h2>
+              <button id="aside-button">
+                <span class="sr-only">카테고리 열기</span>
+              </button>
+            </header>
+            <aside></aside>
+          </section>
+
+        </div>
         
 
 
@@ -103,24 +121,7 @@
           </div>
         </div>
 
-        <div class="relative ml-2">
-
-          <button id="categoryButton" class="w-6 h-6">
-            <span class="sr-only">카테고리 열기</span>
-          </button>
-
-          <!-- ⚠️ render.js 가 찾는 구조 절대 변경 금지 -->
-          <section class="category-aside hidden md:flex flex-col border border-graylv2 bg-white rounded-[10px] absolute left-0 top-full mt-2 z-[9999] overflow-y-auto w-fit h-fit">
-            <header class="flex items-center">
-              <h2 class="aside-tit sr-only text-sm font-semibold ml-5">content</h2>
-              <button id="aside-button">
-                <span class="sr-only">카테고리 열기</span>
-              </button>
-            </header>
-            <aside></aside>
-          </section>
-
-        </div>
+        
         <!-- // 메뉴 영역 -->
       </nav>
       <!-- 모바일에서 메뉴 영역이 보이도록 하는 영역 -->
