@@ -417,25 +417,26 @@ function renderBlogCategory() {
   const categoryArray = Object.keys(categoryList);
   categoryArray.sort();
 
-  const categoryContainer = document.querySelector("aside");
+  const categoryContainer = document.querySelector(".category-aside aside");
   categoryContainer.classList.add(...categoryContainerStyle.split(" "));
 
   const categoryWrapper = document.querySelector(".category-aside");
   const categoryTitle = categoryWrapper.querySelector(".aside-tit");
   const categoryButton = document.getElementById("aside-button");
   window.addEventListener("click", (evt) => {
-    // categoryButton을 눌렀을 때
-    if (evt.target === categoryButton) {
+    if (evt.target === asideButton || asideButton.contains(evt.target)) {
+      // 버튼 클릭 시 토글
       categoryWrapper.classList.toggle("active");
       categoryTitle.classList.toggle("sr-only");
       categoryContainer.classList.toggle("hidden");
     } else if (
       categoryWrapper.classList.contains("active") &&
-      !categoryWrapper.contains(evt.target)
+      !categoryWrapper.contains(evt.target)  // 👈 이 부분이 외부 클릭 감지!
     ) {
+      // 외부 클릭 시 닫기
       categoryWrapper.classList.remove("active");
       categoryTitle.classList.add("sr-only");
-      categoryContainer.classList.remove("hidden");
+      categoryContainer.classList.add("hidden");
     }
   });
 
