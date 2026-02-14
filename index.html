@@ -73,22 +73,10 @@
         <!-- // 블로그 제목 영역 -->
 
         <!-- ✅ category dropdown wrapper -->
-        <div id="categoryWrapper" class="relative mr-4">
-
-          <!-- 버튼 -->
-          <button id="categoryButton" class="w-6 h-6">
+        <div class="w-6 h-6">
+          <button id="categoryButton">
             <span class="sr-only">카테고리 열기</span>
           </button>
-
-          <!-- dropdown -->
-          <div
-            id="categoryContainer"
-            class="hidden absolute right-0 top-full mt-2 border border-graylv2 bg-white rounded-[10px] flex-col w-fit h-fit z-50"
-          >
-            <h2 class="aside-tit sr-only">content</h2>
-            <aside></aside>
-          </div>
-
         </div>
 
 
@@ -159,6 +147,12 @@
       <aside></aside>
     </section> -->
     <!-- // category 검색 영역 -->
+    <section class="categoryWrapper hidden flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit">
+      <header>
+        <h2 class="aside-tit sr-only">content</h2>
+      </header>
+      <aside class="categoryContainer"></aside>
+    </section>
 
     <!-- utils -->
     <script src="js/utils.js"></script>
