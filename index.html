@@ -60,63 +60,55 @@
   </head>
   <body class="font-sans w-full text-surface">
     <header class="relative bg-white mx-auto border-b border-gray-300">
-      <nav
-        class="container max-w-[1190px] mx-auto md:p-[19px] p-4 flex items-center relative"
-      >
-        <!-- 블로그 제목 영역 -->
-        <h1
-          id="blog-title"
-          class="md:text-2xl text-lg leading-6 mr-auto font-semibold text-gray-900 cursor-pointer"
-        >
-          A Journey Back to Myself
-        </h1>
-        <!-- // 블로그 제목 영역 -->
+  <nav class="container max-w-[1190px] mx-auto md:p-[19px] p-4 flex items-center relative">
+    
+    <h1
+      id="blog-title"
+      class="md:text-2xl text-lg leading-6 mr-auto font-semibold text-gray-900 cursor-pointer"
+    >
+      A Journey Back to Myself
+    </h1>
 
-        <!-- 메뉴 영역 -->
-        <div class="md:hidden w-6 h-6">
-          <button id="menu-button">
-            <span class="sr-only">메뉴 열기</span>
-          </button>
-        </div>
+    <!-- ✅ 카테고리 버튼 (기존 menu-button 자리 대체) -->
+    <div class="w-6 h-6">
+      <button id="aside-button">
+        <span class="sr-only">카테고리 열기</span>
+      </button>
+    </div>
 
-        <div id="menu" class="hidden md:flex items-center">
-          <!-- 메뉴 아이템들 -->
-        </div>
+    <div id="menu" class="hidden md:flex items-center"></div>
 
-        <button id="search-button" class="ml-10 md:hidden flex">
-          <span class="sr-only">검색창 열기</span>
-        </button>
+    <button id="search-button" class="ml-10 md:hidden flex">
+      <span class="sr-only">검색창 열기</span>
+    </button>
 
-        <div
-          class="search-cont w-80 hidden md:block md:relative absolute z-10 rounded-2xl p-4 border border-graylv2 bottom-[-12px] right-2 xl:right-0 translate-y-full bg-background w-96 max-w-full box-border md:p-0 md:top-0 md:right-0 md:border-0 md:translate-y-0 md:w-80 md:ml-10"
-        >
-          <label for="search-input">
-            <input
-              type="text"
-              id="search-input"
-              class="search-input bg-graylv1 rounded-[10px] px-5 py-2.5 placeholder:font-normal placehoder:text-graylv3 focus:outline-0 shadow-sm w-full"
-              placeholder="Keyword"
-          /></label>
-          <div
-            class="btn-cont flex gap-2 justify-cetner items-center absolute top-1/2 md:right-4 right-8 -translate-y-1/2"
-          >
-            <button class="reset-inp-btn hidden">
-              <span class="sr-only">검색어 초기화</span>
-            </button>
-            <button class="search-inp-btn">
-              <span class="sr-only">검색하기</span>
-            </button>
-          </div>
-        </div>
-        <!-- // 메뉴 영역 -->
-      </nav>
-      <!-- 모바일에서 메뉴 영역이 보이도록 하는 영역 -->
-      <div
-        id="mobileMenu"
-        class="absolute bg-background w-full max-w-[1190px] border-b border-graylv2 z-10 md:hidden"
-      ></div>
-      <!-- // 모바일에서 메뉴 영역이 보이도록 하는 영역 -->
-    </header>
+    <div
+      class="search-cont w-80 hidden md:block md:relative absolute z-10 rounded-2xl p-4 border border-graylv2 bottom-[-12px] right-2 xl:right-0 translate-y-full bg-background w-96 max-w-full box-border md:p-0 md:top-0 md:right-0 md:border-0 md:translate-y-0 md:w-80 md:ml-10"
+    >
+      <label for="search-input">
+        <input
+          type="text"
+          id="search-input"
+          class="search-input bg-graylv1 rounded-[10px] px-5 py-2.5 focus:outline-0 shadow-sm w-full"
+          placeholder="Keyword"
+        />
+      </label>
+    </div>
+
+    <!-- ✅ 카테고리 영역 (nav 안에 위치) -->
+    <section
+      class="category-aside hidden flex flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit ml-4"
+    >
+      <aside></aside>
+    </section>
+
+  </nav>
+
+  <div
+    id="mobileMenu"
+    class="absolute bg-background w-full max-w-[1190px] border-b border-graylv2 z-10 md:hidden"
+  ></div>
+</header>
 
     <main class="container p-8 pb-4 w-full mx-auto max-w-[1190px] md:pt-[60px]">
       <!-- 블로그 포스트 리스트 영역 -->
@@ -139,7 +131,7 @@
 
     <!-- category 검색 영역 -->
     <section
-      class="category-aside hidden md:flex flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit"
+      class="category-aside flex flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit"
     >
       <header class="flex items-center">
         <h2 class="aside-tit sr-only text-sm font-semibold ml-5">content</h2>
