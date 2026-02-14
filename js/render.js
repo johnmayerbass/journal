@@ -417,9 +417,10 @@ function renderBlogCategory() {
   const categoryArray = Object.keys(categoryList);
   categoryArray.sort();
 
-  const categoryContainer = document.querySelector(".category-aside aside");
+  const categoryContainer = document.querySelector("aside");
   categoryContainer.classList.add(...categoryContainerStyle.split(" "));
 
+  const asideButton = document.querySelector("#aside-button");
   const categoryWrapper = document.querySelector(".category-aside");
   const categoryTitle = categoryWrapper.querySelector(".aside-tit");
   const categoryButton = document.getElementById("aside-button");
