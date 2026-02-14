@@ -4,7 +4,7 @@ const mobileMenu = document.getElementById("mobileMenu");
 
 window.addEventListener("click", (event) => {
 
-  if (event.target === asideButton) {
+  if (event.target.closest("#aside-button")) {
     categoryAside.classList.toggle("hidden");
     mobileMenu.innerHTML = "";
     return;

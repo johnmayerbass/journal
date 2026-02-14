@@ -61,7 +61,7 @@
   <body class="font-sans w-full text-surface">
     <header class="relative bg-white mx-auto border-b border-gray-300">
   <nav class="container max-w-[1190px] mx-auto md:p-[19px] p-4 flex items-center relative">
-    
+
     <h1
       id="blog-title"
       class="md:text-2xl text-lg leading-6 mr-auto font-semibold text-gray-900 cursor-pointer"
@@ -69,21 +69,19 @@
       A Journey Back to Myself
     </h1>
 
-    <!-- ✅ 카테고리 버튼 (기존 menu-button 자리 대체) -->
-    <div class="w-6 h-6">
-      <button id="aside-button">
-        <span class="sr-only">카테고리 열기</span>
-      </button>
-    </div>
+    <!-- ✅ 카테고리 버튼 -->
+    <button id="aside-button" class="w-6 h-6 ml-2 border">
+      <span class="sr-only">카테고리 열기</span>
+    </button>
 
     <div id="menu" class="hidden md:flex items-center"></div>
 
-    <button id="search-button" class="ml-10 md:hidden flex">
+    <button id="search-button" class="ml-4 md:hidden flex">
       <span class="sr-only">검색창 열기</span>
     </button>
 
     <div
-      class="search-cont w-80 hidden md:block md:relative absolute z-10 rounded-2xl p-4 border border-graylv2 bottom-[-12px] right-2 xl:right-0 translate-y-full bg-background w-96 max-w-full box-border md:p-0 md:top-0 md:right-0 md:border-0 md:translate-y-0 md:w-80 md:ml-10"
+      class="search-cont w-80 hidden md:block md:relative absolute z-10 rounded-2xl p-4 border border-graylv2 bottom-[-12px] right-2 xl:right-0 translate-y-full bg-background max-w-full box-border md:p-0 md:top-0 md:right-0 md:border-0 md:translate-y-0 md:w-80 md:ml-10"
     >
       <label for="search-input">
         <input
@@ -95,9 +93,9 @@
       </label>
     </div>
 
-    <!-- ✅ 카테고리 영역 (nav 안에 위치) -->
+    <!-- ✅ 카테고리 패널 (하나만 존재) -->
     <section
-      class="category-aside hidden flex flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit ml-4"
+      class="category-aside hidden absolute top-full right-0 mt-2 flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit"
     >
       <aside></aside>
     </section>
