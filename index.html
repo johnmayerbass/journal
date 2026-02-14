@@ -72,13 +72,15 @@
         </h1>
         <!-- // 블로그 제목 영역 -->
 
-        <div class="flex items-center">
-          <button id="aside-button" class="w-10 h-10 flex items-center justify-center border border-graylv2 rounded-[10px] hover:bg-graylv1 transition-colors">
-            <span class="sr-only">카테고리 열기</span>
-            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
+        <!-- 메뉴 영역 -->
+        <div class="md:hidden w-6 h-6">
+          <button id="menu-button">
+            <span class="sr-only">메뉴 열기</span>
           </button>
+        </div>
+
+        <div id="menu" class="hidden md:flex items-center">
+          <!-- 메뉴 아이템들 -->
         </div>
 
         <button id="search-button" class="ml-10 md:hidden flex">
@@ -136,12 +138,18 @@
     </main>
 
     <!-- category 검색 영역 -->
-    <!-- <section class="category-aside hidden flex-col border border-graylv2 bg-white rounded-[10px] fixed top-20 right-8 z-[100] overflow-y-auto w-fit h-fit shadow-xl">
+    <section
+      class="category-aside hidden md:flex flex-col border border-graylv2 bg-white rounded-[10px] fixed top-24 right-8 overflow-y-auto w-fit h-fit"
+    >
       <header class="flex items-center">
         <h2 class="aside-tit sr-only text-sm font-semibold ml-5">content</h2>
+        <button id="aside-button">
+          <span class="sr-only">카테고리 열기</span>
+        </button>
       </header>
-      <aside class="p-4"></aside> 
-    </section> -->
+      <aside></aside>
+    </section>
+    <!-- // category 검색 영역 -->
 
     <!-- utils -->
     <script src="js/utils.js"></script>

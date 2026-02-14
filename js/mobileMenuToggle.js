@@ -1,24 +1,48 @@
-// 페이지 하단이나 js 파일에 작성
-const asideBtn = document.getElementById("aside-button");
-const categorySection = document.querySelector(".category-aside");
+const menuButton = document.getElementById("menu-button");
+const menu = document.getElementById("menu");
 
-asideBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // 클릭 이벤트가 window로 퍼지는 것 방지
-    
-    // hidden 클래스가 있으면 제거하고 flex 추가, 없으면 반대
-    if (categorySection.classList.contains("hidden")) {
-        categorySection.classList.remove("hidden");
-        categorySection.classList.add("flex");
+/*
+모바일 환경에서 menu, 이 menu는 이벤트 위임으로 최적화하면 불필요한 코드가 많은 함수입니다. 시간상 최적화하지 않고 넘깁니다.
+*/
+const mobileMenu = document.getElementById("mobileMenu");
+
+window.addEventListener("click", (event) => {
+    if (event.target === menuButton) {
+        if (mobileMenu.innerHTML === "") {
+            mobileMenu.innerHTML = menu.innerHTML;
+            const menuItems = mobileMenu.querySelectorAll("a");
+            menuItems.forEach((item, index) => {
+                item.classList.add(...mobileMenuStyle.split(" "));
+                if (index == 0) {
+                    item.classList.add("mt-1.5");
+                }
+                item.style.animation = `slideDown forwards ${index * 0.2}s`;
+            });
+        } else {
+            mobileMenu.innerHTML = "";
+        }
+    } else if (event.target.parentNode === mobileMenu) {
+        event.preventDefault();
+
+        if (event.target.innerText + ".md" === "blog.md") {
+            if (blogList.length === 0) {
+                // 블로그 리스트 로딩
+                initDataBlogList().then(() => {
+                    renderBlogList();
+                });
+            } else {
+                renderBlogList();
+            }
+            // console.log(origin)
+            const url = new URL(origin);
+            url.searchParams.set("menu", event.target.innerText + ".md");
+            window.history.pushState({}, "", url);
+            mobileMenu.innerHTML = "";
+        } else {
+            renderOtherContents(event.target.innerText + ".md");
+            mobileMenu.innerHTML = "";
+        }
     } else {
-        categorySection.classList.add("hidden");
-        categorySection.classList.remove("flex");
-    }
-});
-
-// 카테고리 영역 밖을 클릭하면 자동으로 닫히는 기능
-window.addEventListener("click", (e) => {
-    if (!categorySection.contains(e.target) && e.target !== asideBtn) {
-        categorySection.classList.add("hidden");
-        categorySection.classList.remove("flex");
+        mobileMenu.innerHTML = "";
     }
 });
