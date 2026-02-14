@@ -84,10 +84,11 @@
         </div> -->
 
         <!-- ✅ 모바일 카테고리 버튼 -->
-        <button id="aside-button" class="md:hidden ml-4">
-          <span class="sr-only">카테고리 열기</span>
-          ☰
-        </button>
+        <div class="hidden md:flex items-center">
+          <button id="aside-button">
+            <span class="sr-only">카테고리 열기</span>
+          </button>
+        </div>
         
 
         <button id="search-button" class="ml-10 md:hidden flex">
@@ -158,11 +159,9 @@
     </section> -->
     <!-- // category 검색 영역 -->
      <section
-      class="category-aside hidden flex-col md:flex fixed md:static top-0 right-0 h-full md:h-fit w-72 md:w-fit bg-white border border-graylv2 rounded-[10px] overflow-y-auto z-50 p-4"
+      class="category-aside hidden md:flex flex-col border border-graylv2 bg-white rounded-[10px] fixed top-24 right-8 overflow-y-auto w-fit h-fit"
     >
-      <aside>
-        <!-- 카테고리 내용 -->
-      </aside>
+      <aside></aside>
     </section>
 
     <!-- utils -->
