@@ -74,27 +74,37 @@
 
         
         <div id="menu" class="hidden"></div>
-        <!-- <div class="relative ml-2"> -->
 
-          <!-- <button id="categoryButton" class="w-6 h-6">
-            <span class="sr-only">카테고리 열기</span>
-          </button> -->
-          <!-- relative 컨테이너 추가 -->
-          <div class="relative ml-4 flex items-center">
-            <section class="category-aside flex flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit">
-              <header class="flex items-center">
-                <h2 class="aside-tit sr-only text-sm font-semibold ml-5">content</h2>
-                <button id="aside-button">
-                  <span class="sr-only">카테고리 열기</span>
-                </button>
-              </header>
-              <!-- 드롭다운 내용만 absolute로 -->
-              <aside class="absolute top-full left-0 mt-2 hidden bg-white border border-graylv2 rounded-[10px] z-[9999] shadow-lg"></aside>
-            </section>
-          </div>
+        <!-- 다크모드 토글 버튼 -->
+        <button 
+          id="theme-toggle" 
+          class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-graylv1 dark:hover:bg-gray-700 transition-colors"
+          aria-label="테마 전환"
+        >
+          <!-- 라이트 모드일 때 보이는 달 아이콘 -->
+          <svg id="theme-toggle-dark-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+          </svg>
+          <!-- 다크 모드일 때 보이는 해 아이콘 -->
+          <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+          </svg>
+        </button>
 
-        <!-- </div> -->
-        
+        <!-- relative 컨테이너 추가 -->
+        <div class="relative ml-4 flex items-center">
+          <section class="category-aside flex flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit">
+            <header class="flex items-center">
+              <h2 class="aside-tit sr-only text-sm font-semibold ml-5">content</h2>
+              <button id="aside-button">
+                <span class="sr-only">카테고리 열기</span>
+              </button>
+            </header>
+            <!-- 드롭다운 내용만 absolute로 -->
+            <aside class="absolute top-full left-0 mt-2 hidden bg-white border border-graylv2 rounded-[10px] z-[9999] shadow-lg"></aside>
+          </section>
+        </div>
+
         <button id="search-button" class="ml-5 md:hidden flex">
           <span class="sr-only">검색창 열기</span>
         </button>
