@@ -1,23 +1,24 @@
-const asideButton = document.getElementById("aside-button");
-const categoryAside = document.querySelector(".category-aside");
+// 페이지 하단이나 js 파일에 작성
+const asideBtn = document.getElementById("aside-button");
+const categorySection = document.querySelector(".category-aside");
 
-// 버튼 클릭 시 카테고리 창 열기/닫기
-asideButton.addEventListener("click", (e) => {
-    e.stopPropagation();
+asideBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // 클릭 이벤트가 window로 퍼지는 것 방지
     
-    if (categoryAside.classList.contains("hidden")) {
-        categoryAside.classList.remove("hidden");
-        categoryAside.classList.add("flex"); // Tailwind에서 hidden을 풀 땐 flex나 block 추가
+    // hidden 클래스가 있으면 제거하고 flex 추가, 없으면 반대
+    if (categorySection.classList.contains("hidden")) {
+        categorySection.classList.remove("hidden");
+        categorySection.classList.add("flex");
     } else {
-        categoryAside.classList.add("hidden");
-        categoryAside.classList.remove("flex");
+        categorySection.classList.add("hidden");
+        categorySection.classList.remove("flex");
     }
 });
 
-// 화면의 다른 곳 클릭하면 닫히게 처리
+// 카테고리 영역 밖을 클릭하면 자동으로 닫히는 기능
 window.addEventListener("click", (e) => {
-    if (!categoryAside.contains(e.target) && e.target !== asideButton) {
-        categoryAside.classList.add("hidden");
-        categoryAside.classList.remove("flex");
+    if (!categorySection.contains(e.target) && e.target !== asideBtn) {
+        categorySection.classList.add("hidden");
+        categorySection.classList.remove("flex");
     }
 });
