@@ -72,12 +72,20 @@
         </h1>
         <!-- // 블로그 제목 영역 -->
 
-        <!-- category 버튼 (기존 menu 자리 대체) -->
-        <div class="flex items-center">
+        <div class="relative flex items-center ml-6">
+
           <button id="aside-button">
             <span class="sr-only">카테고리 열기</span>
           </button>
+
+          <section
+            class="category-aside hidden absolute top-full right-0 mt-2 flex flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit z-20"
+          >
+            <aside></aside>
+          </section>
+
         </div>
+
 
         <button id="search-button" class="ml-10 md:hidden flex">
           <span class="sr-only">검색창 열기</span>
@@ -134,7 +142,7 @@
     </main>
 
     <!-- category 검색 영역 -->
-    <section
+    <!-- <section
       class="category-aside hidden flex flex-col border border-graylv2 bg-white rounded-[10px] fixed overflow-y-auto w-fit h-fit"
     >
       <header class="flex items-center">
@@ -144,7 +152,7 @@
         </button>
       </header>
       <aside></aside>
-    </section>
+    </section> -->
     <!-- // category 검색 영역 -->
 
     <!-- utils -->

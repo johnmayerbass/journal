@@ -3,7 +3,7 @@ const categoryAside = document.querySelector(".category-aside");
 
 window.addEventListener("click", (event) => {
 
-  if (event.target === asideButton) {
+  if (event.target.closest("#aside-button")) {
     categoryAside.classList.toggle("hidden");
     return;
   }
