@@ -83,22 +83,14 @@
           <!-- 메뉴 아이템들 -->
         </div>
 
-        <!-- category 검색 영역 상단으로 조정 -->
-        <div class="relative"> <section
-            class="category-aside hidden md:flex items-center justify-between border-b border-graylv2 bg-white fixed top-0 left-0 right-0 z-[100] h-12 px-5"
-          >
-            <header class="flex items-center w-full">
-              <h2 class="aside-tit sr-only text-sm font-semibold">content</h2>
-              
-              <button id="aside-button" class="flex items-center gap-2">
-                <span class="text-sm font-medium">카테고리 메뉴</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
-              </button>
-            </header>
-            
-            <aside>
-              </aside>
-          </section>
+        <div class="category-area hidden md:flex items-center mr-4">
+          <button id="aside-button" class="flex items-center gap-2 px-3 py-2 bg-gray-50 hover:bg-gray-100 rounded-[10px] border border-graylv2 transition-colors">
+            <span class="text-sm font-medium text-gray-700">카테고리</span>
+            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <aside></aside> 
         </div>
         
 
