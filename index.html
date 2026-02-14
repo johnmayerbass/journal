@@ -84,19 +84,21 @@
         </div>
 
         <!-- category 검색 영역 상단으로 조정 -->
-        <div>
-          <section
-            class="category-aside hidden md:flex flex-col border border-graylv2 bg-white rounded-[10px] fixed top-24 right-8 overflow-y-auto w-fit h-fit"
+        <div class="relative"> <section
+            class="category-aside hidden md:flex items-center justify-between border-b border-graylv2 bg-white fixed top-0 left-0 right-0 z-[100] h-12 px-5"
           >
-            <header class="flex items-center">
-              <h2 class="aside-tit sr-only text-sm font-semibold ml-5">content</h2>
-              <button id="aside-button">
-                <span class="sr-only">카테고리 열기</span>
+            <header class="flex items-center w-full">
+              <h2 class="aside-tit sr-only text-sm font-semibold">content</h2>
+              
+              <button id="aside-button" class="flex items-center gap-2">
+                <span class="text-sm font-medium">카테고리 메뉴</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
               </button>
             </header>
-            <aside></aside>
+            
+            <aside>
+              </aside>
           </section>
-          <!-- // category 검색 영역 -->
         </div>
         
 
