@@ -428,14 +428,14 @@ function renderBlogCategory() {
     if (evt.target === categoryButton) {
       categoryWrapper.classList.toggle("active");
       categoryTitle.classList.toggle("sr-only");
-      categoryContainer.classList.toggle("md:flex");
+      categoryContainer.classList.toggle("hidden");
     } else if (
       categoryWrapper.classList.contains("active") &&
       !categoryWrapper.contains(evt.target)
     ) {
       categoryWrapper.classList.remove("active");
       categoryTitle.classList.add("sr-only");
-      categoryContainer.classList.remove("md:flex");
+      categoryContainer.classList.remove("hidden");
     }
   });
 
