@@ -1,26 +1,23 @@
-// 변수 선언 변경
 const asideButton = document.getElementById("aside-button");
-const categoryPanel = document.getElementById("category-panel"); // ID 부여 권장
-const mobileMenu = document.getElementById("mobileMenu");
+const categoryAside = document.querySelector(".category-aside");
 
-// 카테고리 토글 함수
-asideButton.addEventListener("click", (event) => {
-    event.stopPropagation(); // 윈도우 클릭 이벤트 전파 방지
+// 버튼 클릭 시 카테고리 창 열기/닫기
+asideButton.addEventListener("click", (e) => {
+    e.stopPropagation();
     
-    // 1. 데스크탑/모바일 공통: 우측/상단 카테고리 패널 토글
-    if (categoryPanel.classList.contains("hidden")) {
-        categoryPanel.classList.remove("hidden");
-        categoryPanel.classList.add("flex");
+    if (categoryAside.classList.contains("hidden")) {
+        categoryAside.classList.remove("hidden");
+        categoryAside.classList.add("flex"); // Tailwind에서 hidden을 풀 땐 flex나 block 추가
     } else {
-        categoryPanel.classList.add("hidden");
-        categoryPanel.classList.remove("flex");
+        categoryAside.classList.add("hidden");
+        categoryAside.classList.remove("flex");
     }
 });
 
-// 외부 클릭 시 닫기 (사용자 편의성)
-window.addEventListener("click", (event) => {
-    if (!categoryPanel.contains(event.target) && event.target !== asideButton) {
-        categoryPanel.classList.add("hidden");
-        categoryPanel.classList.remove("flex");
+// 화면의 다른 곳 클릭하면 닫히게 처리
+window.addEventListener("click", (e) => {
+    if (!categoryAside.contains(e.target) && e.target !== asideButton) {
+        categoryAside.classList.add("hidden");
+        categoryAside.classList.remove("flex");
     }
 });

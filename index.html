@@ -73,10 +73,10 @@
         <!-- // 블로그 제목 영역 -->
 
         <div class="flex items-center">
-          <button id="aside-button" class="flex items-center gap-2 px-3 py-1.5 border border-graylv2 rounded-[10px] hover:bg-graylv1 transition-colors">
-            <span class="text-sm font-semibold text-gray-700">Category</span>
-            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          <button id="aside-button" class="w-10 h-10 flex items-center justify-center border border-graylv2 rounded-[10px] hover:bg-graylv1 transition-colors">
+            <span class="sr-only">카테고리 열기</span>
+            <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
           </button>
         </div>
@@ -116,14 +116,6 @@
       <!-- // 모바일에서 메뉴 영역이 보이도록 하는 영역 -->
     </header>
 
-    <section id="category-panel" class="hidden flex-col border border-graylv2 bg-white rounded-[10px] fixed top-24 right-8 z-[100] overflow-y-auto w-64 h-fit shadow-lg">
-      <header class="p-4 border-b border-graylv1">
-        <h2 class="text-sm font-bold text-gray-700">카테고리 리스트</h2>
-      </header>
-      <aside class="p-4">
-        </aside>
-    </section>
-
     <main class="container p-8 pb-4 w-full mx-auto max-w-[1190px] md:pt-[60px]">
       <!-- 블로그 포스트 리스트 영역 -->
       <div
@@ -144,18 +136,12 @@
     </main>
 
     <!-- category 검색 영역 -->
-    <!-- <section
-      class="category-aside hidden md:flex flex-col border border-graylv2 bg-white rounded-[10px] fixed top-24 right-8 overflow-y-auto w-fit h-fit"
-    >
+    <section class="category-aside hidden flex-col border border-graylv2 bg-white rounded-[10px] fixed top-20 right-8 z-[100] overflow-y-auto w-fit h-fit shadow-xl">
       <header class="flex items-center">
         <h2 class="aside-tit sr-only text-sm font-semibold ml-5">content</h2>
-        <button id="aside-button">
-          <span class="sr-only">카테고리 열기</span>
-        </button>
       </header>
-      <aside></aside>
-    </section> -->
-    <!-- // category 검색 영역 -->
+      <aside class="p-4"></aside> 
+    </section>
 
     <!-- utils -->
     <script src="js/utils.js"></script>
