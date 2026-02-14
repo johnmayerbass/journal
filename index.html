@@ -72,12 +72,27 @@
         </h1>
         <!-- // 블로그 제목 영역 -->
 
+        
+
         <!-- ✅ category dropdown wrapper -->
         <div class="w-6 h-6">
           <button id="categoryButton">
             <span class="sr-only">카테고리 열기</span>
           </button>
         </div>
+
+        <div id="menu" class="hidden"></div>
+
+        <button id="search-button"...></button>
+
+        <div class="search-cont">...</div>
+
+        <section class="categoryWrapper hidden flex-col border border-graylv2 bg-white rounded-[10px] absolute top-full right-0 mt-2">
+          <header>
+            <h2 class="aside-tit sr-only">content</h2>
+          </header>
+          <aside class="categoryContainer"></aside>
+        </section>
 
 
         <button id="search-button" class="ml-10 md:hidden flex">
@@ -147,12 +162,12 @@
       <aside></aside>
     </section> -->
     <!-- // category 검색 영역 -->
-    <section class="categoryWrapper hidden flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit">
+    <!-- <section class="categoryWrapper hidden flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit">
       <header>
         <h2 class="aside-tit sr-only">content</h2>
       </header>
       <aside class="categoryContainer"></aside>
-    </section>
+    </section> -->
 
     <!-- utils -->
     <script src="js/utils.js"></script>
