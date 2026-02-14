@@ -84,10 +84,12 @@
         </div> -->
 
         <!-- ✅ 모바일 카테고리 버튼 -->
-        <div class="hidden md:flex items-center">
-          <button id="aside-button">
-            <span class="sr-only">카테고리 열기</span>
-          </button>
+        <div id="menu" class="hidden md:flex items-center">
+          <section
+            class="category-aside flex flex-col border border-graylv2 bg-white rounded-[10px] overflow-y-auto w-fit h-fit"
+          >
+            <aside></aside>
+          </section>
         </div>
         
 
@@ -158,11 +160,6 @@
       <aside></aside>
     </section> -->
     <!-- // category 검색 영역 -->
-     <section
-      class="category-aside hidden md:flex flex-col border border-graylv2 bg-white rounded-[10px] fixed top-24 right-8 overflow-y-auto w-fit h-fit"
-    >
-      <aside></aside>
-    </section>
 
     <!-- utils -->
     <script src="js/utils.js"></script>
